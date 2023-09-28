@@ -101,7 +101,52 @@ body {
     }
   }
 
+  /* about  */
   
+  /* Center the h1 heading */
+  .about{
+    padding-bottom: 500px;
+  }
+  .about h1 {
+    text-align: center;
+    padding-top: 40px;
+    margin: 10px;
+  }
+  .grid-about{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+    ". t t t t t t i i i i ."
+    ;
+  }
+  .g-text{
+    grid-area: t;
+    font-size: 20px;
+    margin: 30px;
+  }
+  .g-image{
+    grid-area: i;
+  }
+  .about img{
+    width: 570px;
+  }
+  .cropped-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Adjust the percentages to crop without moving the image */
+  }
+  
+  /* education */
+  .eduvation h1{
+    text-align: center;
+    padding-top: 40px;
+    margin: 10px;
+  }
+
+  /* responsive */
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
