@@ -299,6 +299,47 @@ div.content {
 
 
 /* contain div Protfolio */
+.main-contain h1{
+  font-size: 23px;
+  padding-top: 10px;
+  text-align: center;
+}
+.portfolio-text {
+  font-size: 2em;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.portfolio-button {
+  opacity: 0;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-text:hover + .button-container .portfolio-button,
+.button-container:hover .portfolio-button {
+  opacity: 1;
+}
+
+.portfolio-button:hover {
+  background-color: #f0f0f0;
+}
+.btn-prot{
+  border-radius: 20px;
+}
+.btn-prot:hover,
+.btn-prot:active {
+  background-color: darken(var(--color-btn-background), 2%);
+}
+
 .contain{
   padding-top: 20px;
   display: flex;

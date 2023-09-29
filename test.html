@@ -1,98 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      @import url(https://unpkg.com/open-props/open-props.min.css);
-      @import url(https://unpkg.com/open-props/normalize.min.css);
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Buttons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  main {
+    text-align: center;
+  }
+  
+  .portfolio-text {
+    font-size: 2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .portfolio-button {
+    display: none;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .portfolio-text:hover + .button-container .portfolio-button,
+  .button-container:hover .portfolio-button {
+    display: inline-block;
+  }
+  
+  .portfolio-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+</style>
+<body>
+  <main>
+    <h1 class="portfolio-text" onmouseenter="showButtons()" onmouseleave="hideButtons()">Portfolio</h1>
+    <div class="button-container" onmouseenter="showButtons()" onmouseleave="hideButtons()">
+      <button class="portfolio-button" onclick="showContent('development')">Development</button>
+      <button class="portfolio-button" onclick="showContent('creative')">Creative</button>
+      <button class="portfolio-button" onclick="showContent('youtube')">YouTube</button>
+    </div>
+  </main>
 
-      body {
-        display: grid;
-        place-items: center;
-        min-height: 100vh;
-      }
-
-      ul {
-        padding: 0;
-        display: inline-grid;
-        grid-auto-flow: column;
-        list-style-type: none;
-        grid-template-columns: auto repeat(
-            3,
-            calc((var(--active, 0) * 130px) + 10px)
-          );
-        transition: grid-template-columns 0.35s var(--ease-elastic-1);
-      }
-
-      main {
-        width: 66ch;
-      }
-
-      li {
-        display: grid;
-        justify-content: end;
-        z-index: calc(var(--count) - var(--index));
-      }
-
-      svg {
-        height: 24px;
-        aspect-ratio: 1;
-        fill: currentColor;
-      }
-
-      span {
-        display: grid;
-        align-items: center;
-        grid-auto-flow: column;
-        grid-template-columns: 16px 1fr;
-        gap: 0.25rem;
-      }
-
-      li:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(4)) span {
-        opacity: var(--active, 0);
-      }
-
-      a:focus-visible {
-        outline-color: transparent;
-      }
-
-      ul:is(:focus-within, :hover) {
-        --active: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div style="--count: 4">
-        <ul>
-          <li style="--index: 1">
-              <span>
-                Portfolio
-              </span>
-            </a>
-          </li>
-          <li style="--index: 2">
-              <span>
-                <button onclick="showContent('development')">Development</button>
-              </span>
-            </a>
-          </li>
-          <li style="--index: 3">
-              <span>
-                <button onclick="showContent('creative')">Creative</button>
-              </span>
-            </a>
-          </li>
-          <li style="--index: 4">
-              <span>
-                <button onclick="showContent('youtube')">YouTube</button>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </main>
-  </body>
+  <script>
+    function showContent(category) {
+      alert('Showing content for: ' + category);
+    }
+    
+    function showButtons() {
+      const buttons = document.querySelectorAll('.portfolio-button');
+      buttons.forEach(button => {
+        button.style.display = 'inline-block';
+      });
+    }
+    
+    function hideButtons() {
+      const buttons = document.querySelectorAll('.portfolio-button');
+      buttons.forEach(button => {
+        button.style.display = 'none';
+      });
+    }
+    
+  </script>
+</body>
 </html>
