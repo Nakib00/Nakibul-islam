@@ -1,150 +1,380 @@
 body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.profile {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+.profile h1 {
+  font-size: 20px;
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.social-media a {
+  margin: 0px;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 205px;
+  background-color: #000000d8;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* home  */
+.backround-img {
+  position: relative;
+  background-image: url('assets/img/nakib-cover.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  /* Adjust the height as needed */
+}
+
+.backround-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black overlay with 0.5 opacity */
+}
+
+.text-animation {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: 500;
+  opacity: 0;
+  /* Initially hide the text */
+  animation: fadeInUp 1.5s forwards;
+  /* Animation to fade in and move up */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
   }
 
-  .profile{
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* about  */
+
+/* Center the h1 heading */
+.about {
+  padding-bottom: 400px;
+}
+
+.about h1 {
+  text-align: center;
+  padding-top: 40px;
+  margin: 10px;
+}
+
+.grid-about {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    ". t t t t t t i i i i ."
+  ;
+}
+
+.g-text {
+  grid-area: t;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.g-image {
+  grid-area: i;
+}
+
+.about img {
+  width: 570px;
+}
+
+#box-img {
+  overflow: hidden;
+}
+
+#box-img img {
+  transition: all ease 1s;
+}
+
+#box-img:hover img {
+  scale: 1.2;
+}
+
+.cropped-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  /* Adjust the percentages to crop without moving the image */
+}
+
+/* education */
+.education h1 {
+  text-align: center;
+  padding-top: 40px;
+  margin: 5px;
+}
+.timeline {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: auto;
+}
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid #333;
+}
+/* Card container */
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #333;
+  color: gray;
+  border-radius: 8px;
+  max-width: 400px;
+}
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* Title of the card */
+.title1 {
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+/* Timeline dot  */
+.title1::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid rgb(46, 15, 187);
+}
+.center-edu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust height as needed */
+}
+
+
+  /* resume */
+  .resume {
     text-align: center;
+    padding-top: 40px;
+    margin: 10px;
   }
-  .profile img{
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    object-fit: cover;
+
+  /* protfolio */
+  .protfolio {
+    text-align: center;
+    padding-top: 40px;
+    margin: 10px;
   }
-  .profile h1{
-    font-size: 20px;
-    color: white;
+
+  /* Contact */
+  .contact {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 750px;
+    margin: 10px;
   }
-  .social-media {
+
+  .contact-form {
+    padding-top: 70px;
     display: flex;
     justify-content: center;
-    margin: 5px;
-  }
-  
-  .social-media a {
-    margin: 0px; 
-  }
-  
-  .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 205px;
-    background-color: #000000d8;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: rgb(255, 255, 255);
-    padding: 16px;
-    text-decoration: none;
-  }
-   
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-
-  /* home  */
-  .backround-img {
+    align-items: center;
     position: relative;
-    background-image: url('assets/img/nakib-cover.jpg');
-    background-size: cover;
-    background-position: center center;
-    height: 100vh; /* Adjust the height as needed */
   }
-  
-  .backround-img::after {
-    content: '';
-    position: absolute;
-    top: 0;
+
+  .wrapper {
+    width: 80%;
+    /* Adjust the width as needed */
+    text-align: center;
+    /* Center the content inside the wrapper */
+  }
+
+  #title-Tag-Line {
+    font-size: 20px;
+  }
+
+  /* form animation starts */
+  .form {
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 5px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 0.5 opacity */
-  }
-  
-  .text-animation {
+    right: 0;
     position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    font-weight: 200;
-    opacity: 0; /* Initially hide the text */
-    animation: fadeInUp 1.5s forwards; /* Animation to fade in and move up */
+    border-top: 5px solid #000000;
+    animation: bounce 1.5s infinite;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translate(-50%, -40%);
+
+  ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
+
+  .title {
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 300px;
+  }
+
+  .termsConditions {
+    margin: 0 auto 5px 80px;
+  }
+
+  .pageTitle {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .secondaryTitle {
+    color: grey;
+  }
+
+  .name {
+    background-color: #ebebeb;
+    color: white;
+  }
+
+  .name:hover {
+    border-bottom: 5px solid #000000;
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+  }
+
+  .email {
+    background-color: #ebebeb;
+    height: 2em;
+  }
+
+  .email:hover {
+    border-bottom: 5px solid #000000;
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+  }
+
+  .message {
+    background-color: #ebebeb;
+    overflow: hidden;
+    height: 10rem;
+  }
+
+  .message:hover {
+    border-bottom: 5px solid #000000;
+    height: 12em;
+    width: 380px;
+    transition: ease 0.5s;
+  }
+
+  .formEntry {
+    display: block;
+    margin: 30px auto;
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    transition: all 0.5s ease 0s;
+  }
+
+  .submit {
+    width: 200px;
+    color: white;
+    background-color: #212121;
+    font-size: 20px;
+  }
+
+  .submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #0e3750;
+    border-radius: 0%;
+  }
+
+  @keyframes bounce {
+    0% {
+      tranform: translate(0, 4px);
     }
-    to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
+
+    50% {
+      transform: translate(0, 8px);
     }
   }
 
-  /* about  */
-  
-  /* Center the h1 heading */
-  .about{
-    padding-bottom: 500px;
-  }
-  .about h1 {
-    text-align: center;
-    padding-top: 40px;
-    margin: 10px;
-  }
-  .grid-about{
-    padding-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 50px 1fr 50px;
-    grid-template-areas: 
-    ". t t t t t t i i i i ."
-    ;
-  }
-  .g-text{
-    grid-area: t;
-    font-size: 20px;
-    margin: 30px;
-  }
-  .g-image{
-    grid-area: i;
-  }
-  .about img{
-    width: 570px;
-  }
-  .cropped-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Adjust the percentages to crop without moving the image */
-  }
-  
-  /* education */
-  .eduvation h1{
-    text-align: center;
-    padding-top: 40px;
-    margin: 10px;
-  }
 
   /* responsive */
   @media screen and (max-width: 700px) {
@@ -153,33 +383,40 @@ body {
       height: auto;
       position: relative;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+
+    .sidebar a {
+      float: left;
+    }
+
+    div.content {
+      margin-left: 0;
+    }
 
     .profile {
       padding: 20px;
-      justify-content: center; 
+      justify-content: center;
     }
-  
+
     .profile img {
-      width: 80px; 
-      height: 80px; 
+      width: 80px;
+      height: 80px;
     }
-  
+
     .social-media {
-      margin-top: 10px; 
+      margin-top: 10px;
     }
   }
-  
+
   @media screen and (max-width: 400px) {
     .sidebar a {
       text-align: center;
       float: none;
     }
+
     .profile h1 {
       font-size: 1.2em;
     }
-  
+
     .social-media a {
       margin: 0 5px;
     }
