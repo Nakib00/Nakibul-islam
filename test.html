@@ -4,88 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="ss.scss" />
+    <style>
+      @import url(https://unpkg.com/open-props/open-props.min.css);
+      @import url(https://unpkg.com/open-props/normalize.min.css);
+
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+
+      ul {
+        padding: 0;
+        display: inline-grid;
+        grid-auto-flow: column;
+        list-style-type: none;
+        grid-template-columns: auto repeat(
+            3,
+            calc((var(--active, 0) * 130px) + 10px)
+          );
+        transition: grid-template-columns 0.35s var(--ease-elastic-1);
+      }
+
+      main {
+        width: 66ch;
+      }
+
+      li {
+        display: grid;
+        justify-content: end;
+        z-index: calc(var(--count) - var(--index));
+      }
+
+      svg {
+        height: 24px;
+        aspect-ratio: 1;
+        fill: currentColor;
+      }
+
+      span {
+        display: grid;
+        align-items: center;
+        grid-auto-flow: column;
+        grid-template-columns: 16px 1fr;
+        gap: 0.25rem;
+      }
+
+      li:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(4)) span {
+        opacity: var(--active, 0);
+      }
+
+      a:focus-visible {
+        outline-color: transparent;
+      }
+
+      ul:is(:focus-within, :hover) {
+        --active: 1;
+      }
+    </style>
   </head>
-
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Lato:100&display=swap");
-
-    body,
-    html {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: #5ca4ea;
-      overflow: hidden;
-      font-family: "Lato", sans-serif;
-    }
-
-    .container-prot {
-      width: 400px;
-      height: 400px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .center {
-      width: 180px;
-      height: 60px;
-      position: absolute;
-    }
-
-    .btn {
-      width: 180px;
-      height: 60px;
-      cursor: pointer;
-      background: transparent;
-      border: 1px solid #91c9ff;
-      outline: none;
-      transition: 1s ease-in-out;
-    }
-
-    svg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      fill: none;
-      stroke: #fff;
-      stroke-dasharray: 150 480;
-      stroke-dashoffset: 150;
-      transition: 1s ease-in-out;
-    }
-
-    .btn:hover {
-      transition: 1s ease-in-out;
-      background: #4f95da;
-    }
-
-    .btn:hover svg {
-      stroke-dashoffset: -480;
-    }
-
-    .btn span {
-      color: white;
-      font-size: 18px;
-      font-weight: 100;
-    }
-  </style>
   <body>
-    <div class="container-prot">
-      <div class="center">
-        <button class="btn">
-          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-          </svg>
-          <span>HOVER ME</span>
-        </button>
+    <main>
+      <div style="--count: 4">
+        <ul>
+          <li style="--index: 1">
+              <span>
+                Portfolio
+              </span>
+            </a>
+          </li>
+          <li style="--index: 2">
+              <span>
+                <button onclick="showContent('development')">Development</button>
+              </span>
+            </a>
+          </li>
+          <li style="--index: 3">
+              <span>
+                <button onclick="showContent('creative')">Creative</button>
+              </span>
+            </a>
+          </li>
+          <li style="--index: 4">
+              <span>
+                <button onclick="showContent('youtube')">YouTube</button>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </main>
   </body>
 </html>
