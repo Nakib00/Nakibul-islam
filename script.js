@@ -15,30 +15,32 @@ function showContent(type) {
         <div class="grid1">
           <div class="grid__item">
             <div class="card1">
-              <img class="card__img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="Snowy Mountains">
+              <img class="card__img" src="https://raw.githubusercontent.com/Nakib00/University_Analysis_System/main/Repost%20File/Websit%20overview/7.PNG" alt="">
               <div class="card__content">
-                <h1 class="card__header">A starry night</h1>
-                <p class="card__text">Look up at the night sky, and find yourself <strong>immersed</strong>dddeeee fddadf .</p>
+                <h1 class="card__header">
+                University classroom management system</h1>
+                <p class="card__text">The project aims to optimize classroom allocation in a university, efficiently assigning classrooms to departmental sections across different shifts.</p>
               </div>
             </div>
           </div>
       
           <div class="grid__item">
             <div class="card1">
-              <img class="card__img" src="https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="Desert">
+              <img class="card__img" src="https://media.licdn.com/dms/image/sync/D5627AQF07He6hMVNKA/articleshare-shrink_800/0/1695924332277?e=1696669200&v=beta&t=j2HDoO2aWhn-BUYtCI-BR42PEHXaylQECap0Mwn5uco" alt="">
               <div class="card__content">
-                <h1 class="card__header">Misty mornings</h1>
-                <p class="card__text">Capture the stunning <strong>essence</strong> of the early morning sunrise in the Californian wilderness.</p>
+                <h1 class="card__header">Invoice Web Application</h1>
+                <p class="card__text">Invoice Web App facilitates easy creation and management of business invoices.</p>
               </div>
             </div>
           </div>
       
           <div class="grid__item">
             <div class="card1">
-              <img class="card__img" src="https://images.unsplash.com/photo-1506318164473-2dfd3ede3623?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80" alt="Canyons">
+              <img class="card__img" src="https://raw.githubusercontent.com/Nakib00/BMI-Calculator-apps-flutter/main/Screenshot/Dashbord5.png" alt="">
               <div class="card__content">
-                <h1 class="card__header">Utah sunsets</h1>
-                <p class="card__text">Sunsets over the <strong>stunning</strong> Utah Canyonlands, is truly something much more than incredible.</p>
+                <h1 class="card__header">
+                BMI Calculator apps Flutter</h1>
+                <p class="card__text">This is a straightforward BMI (Body Mass Index) calculator app in Flutter for users to calculate BMI using weight in kilograms and height in feet/inches.</p>
               </div>
             </div>
           </div>
