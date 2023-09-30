@@ -447,7 +447,7 @@ div.content {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-top: 20px;
+  padding-top: 30px;
   width: 100%; /* Adjust width as needed */
   height: 100%; /* Adjust height as needed */
 }
@@ -455,7 +455,9 @@ div.content {
   width: 220px;
   text-align: center;
 }
-
+a {
+  text-decoration: none;
+}
 
 /* Contact */
 .contact {
