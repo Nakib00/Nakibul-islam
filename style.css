@@ -167,6 +167,9 @@ div.content {
 }
 
 /* education */
+#education{
+  background-color: #e6e6e6;
+}
 .education h1 {
   text-align: center;
   padding-top: 40px;
@@ -236,7 +239,6 @@ div.content {
   /* Adjust height as needed */
 }
 
-
 /* resume */
 .resume {
   text-align: center;
@@ -257,46 +259,21 @@ div.content {
   width: 100%;
   height: 100px;
   font-family: "Lato", sans-serif;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas:
-    "d d d d c c c c u u u u";
-  grid-column-gap: 10px;
-  /* Adjust the column gap */
-  grid-row-gap: 10px;
-  /* Adjust the row gap */
-
-}
-
-.development {
-  grid-area: d;
-}
-
-.creative {
-  grid-area: c;
-}
-
-.youtube {
-  grid-area: u;
-}
-
-.container-prot {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  /* Each item should take equal space */
-  text-align: center;
 }
 
 .center {
   width: 180px;
   height: 60px;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-
+.center * {
+  margin: 0;
+  padding: 0;
+}
 
 /* contain div Protfolio */
 .main-contain h1{
@@ -454,12 +431,16 @@ div.content {
 .see-more {
   width: 220px;
   text-align: center;
+  padding-bottom: 20px;
 }
-a {
+.see-more a{
   text-decoration: none;
 }
 
 /* Contact */
+#contact{
+  background-color: #e6e6e6;
+}
 .contact {
   text-align: center;
   padding-top: 50px;
@@ -629,6 +610,58 @@ a {
   .social-media {
     margin-top: 10px;
   }
+  /* Home */
+  .text-animation {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+  /* About */
+  .grid-about {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      ". t t t t t"
+      ". i i i i ."
+      "............";
+  }
+
+  .g-text {
+    grid-area: t;
+  }
+  .g-image {
+    grid-area: i;
+  }
+  .g-text {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    margin: 20px; /* Adjust margin */
+    padding: 20px;
+  }
+
+  .about img {
+    width: 100%; /* Adjust image width */
+  }
+  /* Education */
+  .education h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .timeline {
+    margin: 10px auto;
+  }
+
+  .card {
+    max-width: 300px; /* Adjust maximum width for smaller screens */
+  }
+
+  .title1::before {
+    left: -29px; /* Adjust the position of the timeline dot */
+  }
+
+  .center-edu {
+    height: auto; /* Adjust height for smaller screens */
+  }
+  /* Prot */
+  .grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -643,5 +676,55 @@ a {
 
   .social-media a {
     margin: 0 5px;
+  }
+  /* Home */
+  .text-animation {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  /* About */
+  .grid-about {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      ". t t t"
+      ". i i ."
+      "........";
+  }
+  .g-text {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    margin: 10px; /* Adjust margin */
+    padding: 10px;
+  }
+  .g-text {
+    grid-area: t;
+  }
+  
+  .g-image {
+    grid-area: i;
+  }
+  /* Education */
+  .education h1 {
+    font-size: 20px; /* Adjust font size for even smaller screens */
+  }
+
+  .timeline {
+    margin: 5px auto;
+  }
+
+  .card {
+    max-width: 250px; /* Adjust maximum width for very small screens */
+  }
+
+  .title1::before {
+    left: -25px; /* Adjust the position of the timeline dot */
+  }
+  /* Prot */
+  .grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+  }
+
+  .card__content {
+    padding: 2rem 1.5rem;
   }
 }

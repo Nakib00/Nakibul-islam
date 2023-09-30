@@ -48,7 +48,7 @@ function showContent(type) {
       </div>
       <div class="explor-button">
         <div class="see-more">
-          <a href="https://www.youtube.com/@mdnakibulislam8183"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
+          <a href="https://github.com/Nakib00"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
         </div>
       </div>
     </div> 
