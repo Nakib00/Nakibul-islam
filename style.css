@@ -113,37 +113,36 @@ div.content {
 
 /* Center the h1 heading */
 .about {
-  padding-bottom: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem; /* Adjust padding as needed */
 }
 
 .about h1 {
-  text-align: center;
-  padding-top: 40px;
-  margin: 10px;
+  padding-top: 1rem; /* Adjust padding as needed */
+  margin: 0;
 }
 
 .grid-about {
-  padding-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas:
-    ". t t t t t t i i i i ."
-  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Adjust gap as needed */
+  padding-top: 40px;
 }
 
 .g-text {
-  grid-area: t;
-  font-size: 20px;
-  margin: 30px;
+  font-size: 1rem; /* Adjust font size as needed */
 }
 
 .g-image {
-  grid-area: i;
+  width: 100%; /* Adjust width as needed */
 }
 
 .about img {
-  width: 570px;
+  width: 100%;
+  height: auto;
 }
 
 #box-img {
@@ -151,11 +150,11 @@ div.content {
 }
 
 #box-img img {
-  transition: all ease 1s;
+  transition: transform 0.5s ease-in-out;
 }
 
 #box-img:hover img {
-  scale: 1.2;
+  transform: scale(1.1); /* Adjust scale factor as needed */
 }
 
 .cropped-image {
@@ -163,7 +162,19 @@ div.content {
   height: auto;
   display: block;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  /* Adjust the percentages to crop without moving the image */
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 576px) {
+  .grid-about {
+    flex-direction: row; /* Adjust flex-direction as needed */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 4rem; /* Adjust padding as needed */
+  }
 }
 
 /* education */
@@ -728,3 +739,5 @@ div.content {
     padding: 2rem 1.5rem;
   }
 }
+
+/* Animation */
