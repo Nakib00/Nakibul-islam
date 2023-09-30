@@ -103,30 +103,30 @@ function showContent(type) {
         <div class="grid1">
           <div class="grid__item">
             <div class="card1">
-            <iframe class="card__img" src="https://www.youtube.com/embed/aUaX_P7Il_U" frameborder="0" allowfullscreen></iframe>
+            <iframe class="card__img" src="https://youtu.be/83SNcoBW9Qc?si=wOrFaqx_kXfZgv1t" frameborder="0" allowfullscreen></iframe>
               <div class="card__content">
-                <h1 class="card__header">A starry night</h1>
-                <p class="card__text">Look up at the night sky, and find yourself <strong>immersed</strong>dddeeee fddadf .</p>
+                <h1 class="card__header">Database Management System (DBMS)</h1>
+                <p class="card__text">In this video, I provide a comprehensive overview of Database Management Systems.</p>
               </div>
             </div>
           </div>
       
           <div class="grid__item">
             <div class="card1">
-            <iframe class="card__img" src="https://www.youtube.com/embed/aUaX_P7Il_U" frameborder="0" allowfullscreen></iframe>
+            <iframe class="card__img" src="https://youtu.be/IhgulKrqN8M?si=D-_NScRG3ZQayNHP" frameborder="0" allowfullscreen></iframe>
               <div class="card__content">
-                <h1 class="card__header">Misty mornings</h1>
-                <p class="card__text">Capture the stunning <strong>essence</strong> of the early morning sunrise in the Californian wilderness.</p>
+                <h1 class="card__header">Python Complete Course</h1>
+                <p class="card__text">This video covers the basics of Python programming.</p>
               </div>
             </div>
           </div>
       
           <div class="grid__item">
             <div class="card1">
-            <iframe class="card__img" src="https://www.youtube.com/embed/aUaX_P7Il_U" frameborder="0" allowfullscreen></iframe>
+            <iframe class="card__img" src="https://youtu.be/zrPiJaZYhG0?si=nucM2ubq4KvxoFyW" frameborder="0" allowfullscreen></iframe>
               <div class="card__content">
-                <h1 class="card__header">Utah sunsets</h1>
-                <p class="card__text">Sunsets over the <strong>stunning</strong> Utah Canyonlands, is truly something much more than incredible.</p>
+                <h1 class="card__header">C++ Complete Course for Beginners</h1>
+                <p class="card__text">In this video, I cover the fundamentals of C++ programming in one comprehensive tutorial.</p>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ function showContent(type) {
       </div>
       <div class="explor-button">
         <div class="see-more">
-          <a href="https://www.youtube.com/@mdnakibulislam8183"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
+          <a href="https://www.youtube.com/@Nakibulislam/videos"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
         </div>
       </div>
     </div> 
