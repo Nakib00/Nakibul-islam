@@ -1,61 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nakibul islam</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="style.css" />
-</head>
-    <body>
-        <div id="main">
-            <div id="back">
-                <img src="img\hero img\hero1.png" alt="" />
-                <img src="img\hero img\hero2.png" alt="" />
-                <img src="img\hero img\hreo3.png" alt="" />
-                <img src="img\hero img\hero4.png" alt="">
+  </head>
+  <body>
+    <div id="main">
+      <div id="back">
+        <img src="img\hero img\hero1.png" alt="" />
+        <img src="img\hero img\hero2.png" alt="" />
+        <img src="img\hero img\hreo3.png" alt="" />
+        <img src="img\hero img\hero4.png" alt="" />
+      </div>
+      <div id="top">
+        <div id="working-area">
+          <div id="nav">
+            <div id="sidebar">
+              <ul>
+                <li onclick="closeSidebar()"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Education</a></li>
+                <li><a href="">Protfilo</a></li>
+                <li><a href="">Resume</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
             </div>
-            <div id="top">
-                <div id="working-area">
-                <div id="nav">
-                    <div id="nleft">
-                    <img src="img\logo\Nakib.png" alt="" />
-                    <a href="">About</a>
-                    <a href="">Education</a>
-                    <a href="">Protfilo</a>
-                    </div>
-                    <div id="nright">
-                    <a href="">Resume</a>
-                    <a href="">Contact</a>
-                    </div>
-                </div>
-                <div id="hero">
-                    <div id="hero-left">
-                    <div class="elem">
-                        <h1>Hello I'm</h1>
-                        <h1>I'm a</h1>
-                        <h1>Interest in</h1>
-                        <h1>Enthusiasm</h1>
-                    </div>
-                    <div class="elem">
-                        <h1>Nakibul Islam</h1>
-                        <h1>Student</h1>
-                        <h1>Programming</h1>
-                        <h1>Robotics</h1>
-                    </div>
-                    </div>
-                    <div id="hero-right"></div>
-                </div>
-                </div>
+            <div id="nleft">
+              <a href="#"><img src="img\logo\Nakib.png" alt="" /></a>
+              <a href="#about" id="nav-ab" class="hidenOnMobile">About</a>
+              <a href="" id="nav-ed" class="hidenOnMobile">Education</a>
+              <a href="" id="nav-pf" class="hidenOnMobile">Protfilo</a>
             </div>
+            <div id="nright">
+              <a href="" id="nav-re" class="hidenOnMobile">Resume</a>
+              <a href="" id="nav-ct" class="hidenOnMobile">Contact</a>
+              <ul>
+                <li onclick="openSidebar()" class="menu-batton">
+                  <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+                </li>
+              </ul>
+            </div>
+          </div>          
+          <div id="hero">
+            <div id="hero-left">
+              <div class="elem">
+                <h1>Hello I'm</h1>
+                <h1>I'm a</h1>
+                <h1>Interest in</h1>
+                <h1>Enthusiasm</h1>
+              </div>
+              <div class="elem">
+                <h1>Nakibul Islam</h1>
+                <h1>Student</h1>
+                <h1>Programming</h1>
+                <h1>Robotics</h1>
+              </div>
+            </div>
+            <div id="hero-right"></div>
+          </div>
         </div>
+      </div>
+      <div id="about">
+        <div id="about-left">
+          <h1>Hi I'm <span>Md Nakibul Islma</span></h1>
+          <p>I commonly known as Nakib. My birthday is on May 20th. Originally from Feni, Bangladesh, I currently reside in the vibrant capital city of Dhaka. My father, Md Nurul Amin, serves as an Education Officer for the Bangladesh government, and my mother, Rashada Akter, is a dedicated homemaker. I have a wonderful sister named Nshat Nishe. My passions include computer gaming, exploring nature, and immersing myself in the world of computer science. As a computer science student, I thrive on coding, innovation, and staying updated with the latest technologies.</p>
+          <a href="#about"><button class="more-info">More info</button></a>
+        </div>
+        <div id="about-right">
+          <div class="img" id="box-img">
+            <img src="img\about img.png" alt="" class="cropped-image">
+        </div>
+        </div>
+      </div>
+    </div>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-        <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-        <script src="script.js"></script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>

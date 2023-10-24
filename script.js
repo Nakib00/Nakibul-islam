@@ -58,3 +58,16 @@ elems.forEach(function (elem) {
     }
   });
 });
+
+
+// Function to open the sidebar
+function openSidebar() {
+  const sidebar = document.querySelector('#sidebar');
+  sidebar.classList.add('active');
+}
+
+// Function to close the sidebar
+function closeSidebar() {
+  const sidebar = document.querySelector('#sidebar');
+  sidebar.classList.remove('active');
+}
