@@ -1,145 +1,60 @@
-// Protfolio button show 
-function showContent(category) {
-  alert("Showing content for: " + category);
-}
+Shery.imageEffect("#back", {
+  style: 5,
+  config: {
+    a: { value: 2, range: [0, 30] },
+    b: { value: -1, range: [-1, 1] },
+    zindex: { value: -9996999, range: [-9999999, 9999999] },
+    aspect: { value: 2.056983308419169 },
+    gooey: { value: true },
+    infiniteGooey: { value: true },
+    growSize: { value: 4, range: [1, 15] },
+    durationOut: { value: 1, range: [0.1, 5] },
+    durationIn: { value: 1.5, range: [0.1, 5] },
+    displaceAmount: { value: 0.5 },
+    masker: { value: false },
+    maskVal: { value: 1, range: [1, 5] },
+    scrollType: { value: 0 },
+    geoVertex: { range: [1, 64], value: 1 },
+    noEffectGooey: { value: true },
+    onMouse: { value: 2 },
+    noise_speed: { value: 0.2, range: [0, 10] },
+    metaball: { value: 0.1, range: [0, 2], _gsap: { id: 9 } },
+    discard_threshold: { value: 0.5, range: [0, 1] },
+    antialias_threshold: { value: 0, range: [0, 0.1] },
+    noise_height: { value: 0.35, range: [0, 2] },
+    noise_scale: { value: 28.93, range: [0, 100] },
+  },
+  gooey: true,
+});
 
-// Change container in protfolio container
-function showContent(type) {
-  const contentDiv = document.getElementById("main-contain");
+// Animation Hero H1 text
+var elems = document.querySelectorAll(".elem");
 
-  if (type === "development") {
-    contentDiv.innerHTML = `
-      <div class="main-contain" id="main-contain">
-      <h1>Development</h1>
-      <div class="contain">
-        <div class="grid1">
-          <div class="grid__item">
-            <div class="card1">
-              <img class="card__img" src="https://raw.githubusercontent.com/Nakib00/University_Analysis_System/main/Repost%20File/Websit%20overview/7.PNG" alt="">
-              <div class="card__content">
-                <h1 class="card__header">
-                University classroom management system</h1>
-                <p class="card__text">The project aims to optimize classroom allocation in a university, efficiently assigning classrooms to departmental sections across different shifts.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-              <img class="card__img" src="https://media.licdn.com/dms/image/sync/D5627AQF07He6hMVNKA/articleshare-shrink_800/0/1695924332277?e=1696669200&v=beta&t=j2HDoO2aWhn-BUYtCI-BR42PEHXaylQECap0Mwn5uco" alt="">
-              <div class="card__content">
-                <h1 class="card__header">Invoice Web Application</h1>
-                <p class="card__text">Invoice Web App facilitates easy creation and management of business invoices.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-              <img class="card__img" src="https://raw.githubusercontent.com/Nakib00/BMI-Calculator-apps-flutter/main/Screenshot/Dashbord5.png" alt="">
-              <div class="card__content">
-                <h1 class="card__header">
-                BMI Calculator apps Flutter</h1>
-                <p class="card__text">This is a straightforward BMI (Body Mass Index) calculator app in Flutter for users to calculate BMI using weight in kilograms and height in feet/inches.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="explor-button">
-        <div class="see-more">
-          <a href="https://github.com/Nakib00"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
-        </div>
-      </div>
-    </div> 
-      `;
-  } else if (type === "creative") {
-    contentDiv.innerHTML = `
-      <div class="main-contain" id="main-contain">
-      <h1>Creative</h1>
-      <div class="contain">
-        <div class="grid1">
-          <div class="grid__item">
-            <div class="card1">
-              <iframe class="card__img" src="https://www.youtube.com/embed/aUaX_P7Il_U" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">Avash | Camera</h1>
-                <p class="card__text">I edited a visual video for Avash, a renowned music brand in Bangladesh.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-            <iframe class="card__img" src="https://youtu.be/ZZpp4WMokZ0?si=QxbVZ3fOFPicgLV1" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">FENI GOVERNMENT COLLEGE Documentary</h1>
-                <p class="card__text">I created documentary videos for Feni Government College.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-            <iframe class="card__img" src="https://youtu.be/GjnC-ZXZ9rQ?si=qa5gw2a5CWN_pVOy" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">Shoes commercial</h1>
-                <p class="card__text">I directed the production of this commercial video.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="explor-button">
-        <div class="see-more">
-          <a href="https://www.youtube.com/@mdnakibulislam8183"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
-        </div>
-      </div>
-    </div> 
-      `;
-  } else if (type === "youtube") {
-    contentDiv.innerHTML = `
-      <div class="main-contain" id="main-contain">
-      <h1>YouTube</h1>
-      <div class="contain">
-        <div class="grid1">
-          <div class="grid__item">
-            <div class="card1">
-            <iframe class="card__img" src="https://youtu.be/83SNcoBW9Qc?si=wOrFaqx_kXfZgv1t" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">Database Management System (DBMS)</h1>
-                <p class="card__text">In this video, I provide a comprehensive overview of Database Management Systems.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-            <iframe class="card__img" src="https://youtu.be/IhgulKrqN8M?si=D-_NScRG3ZQayNHP" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">Python Complete Course</h1>
-                <p class="card__text">This video covers the basics of Python programming.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="grid__item">
-            <div class="card1">
-            <iframe class="card__img" src="https://youtu.be/zrPiJaZYhG0?si=nucM2ubq4KvxoFyW" frameborder="0" allowfullscreen></iframe>
-              <div class="card__content">
-                <h1 class="card__header">C++ Complete Course for Beginners</h1>
-                <p class="card__text">In this video, I cover the fundamentals of C++ programming in one comprehensive tutorial.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="explor-button">
-        <div class="see-more">
-          <a href="https://www.youtube.com/@Nakibulislam/videos"><button class="card__btn">Seemore<span>&rarr;</span></button></a>
-        </div>
-      </div>
-    </div> 
-      `;
-  }
-}
+elems.forEach(function (elem) {
+  var h1all = elem.querySelectorAll("h1");
+  var index = 0;
+  var animating = false;
+
+  document.querySelector("#main").addEventListener("click", function () {
+    if (!animating) {
+      animating = true;
+      gsap.to(h1all[index], {
+        top: "-=100%",
+        ease: Expo.easeInOut,
+        duration: 1,
+        onComplete: function () {
+          gsap.set(this._targets[0], { top: "100%" });
+          animating = false;
+        },
+      });
+
+      index === h1all.length - 1 ? (index = 0) : index++;
+
+      gsap.to(h1all[index], {
+        top: "-=100%",
+        ease: Expo.easeInOut,
+        duration: 1,
+      });
+    }
+  });
+});
