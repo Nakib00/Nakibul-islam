@@ -270,6 +270,24 @@ a {
   max-width: 1920px;
   background-color: rgb(50, 53, 53);
 }
+#protfilo2{
+  width: 100%;
+  height: 20%;
+  max-width: 1920px;
+  background-color: rgb(50, 53, 53);
+}
+#protfilo2 h2{
+  font-size: 2vw;
+  padding-top: 2vw;
+  padding-left: 9vw;
+  margin-bottom: 1vw;;
+  color: rgb(255, 255, 255);
+}
+#protfilo2 hr {
+  /* border-top: 3px solid black; */
+  width: 20%;
+  margin-left: 3vw;
+}
 #protfilo h1 {
   font-size: 4vw;
   padding-top: 2vw;
@@ -302,6 +320,19 @@ a {
   max-width: 1920px;
   background-color: rgb(50, 53, 53);
 }
+#protfilo-mani2{
+  display: flex;
+  justify-content: center;
+  gap: 2.2vw;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  width: 100%;
+  height: 80%;
+  max-width: 1920px;
+  background-color: rgb(50, 53, 53);
+}
 .filo-card {
   height: 75%;
   width: 27%;
@@ -319,6 +350,26 @@ a {
 }
 #prt-card3 {
   background-image: url(img/protfilo/zantech.png);
+}
+/* protfilo 2 */
+#prt2-card1 {
+  background-image: url(img/protfilo/avash-canera.jpg);
+}
+#prt2-card2 {
+  background-image: url(img/protfilo/feni-goverment-college.jpeg);
+}
+#prt2-card3 {
+  background-image: url(img/protfilo/show.jpg);
+}
+/* protfilo 3 */
+#prt3-card1 {
+  background-image: url(img/protfilo/sqlviseo.png);
+}
+#prt3-card2 {
+  background-image: url(img/protfilo/pythonvideo.png);
+}
+#prt3-card3 {
+  background-image: url(img/protfilo/c++video.png);
 }
 .overlay {
   height: 100%;
