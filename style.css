@@ -381,14 +381,14 @@ a {
   transition: all ease 0.6s;
 }
 .overlay h4 {
-  color: rgb(0, 0, 0);
+  color: rgb(235, 224, 17);
   font-size: 2.8vw;
   text-transform: uppercase;
   margin-bottom: 1.5vw;
   text-align: center;
 }
 .overlay p {
-  color: rgb(0, 0, 0);
+  color: rgb(235, 224, 17);
   font-size: 1.2vw;
   margin-bottom: 1.5vw;
 }
