@@ -1,73 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    border-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-html,body {
-    width: 100%;
-    height: 100%;
-}
-
-#main{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    /* background-color: black */
-}
-#back{
-    width: 100%;
-    height: 100vh;
-}
-#back img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-#top{
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    /* background-color: rgba(0, 0, 0, 0.607) */
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* background-color: black */
 }
-#working-area{
-    margin:0 auto;
-    width: 80%;
-    height: 100vh;
-    max-width: 1920px;
-    /* border: 1px solid red; */
-    position: relative;
+#back {
+  width: 100%;
+  height: 100vh;
+}
+#back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#top {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.607) */
+}
+#working-area {
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  max-width: 1920px;
+  /* border: 1px solid red; */
+  position: relative;
 }
 
 /* Manin nav */
-#nav{
-    pointer-events: all;
-    width: 100%;
-    padding: 10px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#nav {
+  pointer-events: all;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#nav img,i{
-    height: 90px;
-    filter: brightness(0) invert(1);
+#nav img,
+i {
+  height: 90px;
+  filter: brightness(0) invert(1);
 }
 
 /* Sidebar for mobile */
-#sidebar ul{
+#sidebar ul {
   width: 100%;
   list-style: none;
 }
-#sidebar li{
+#sidebar li {
   width: 100%;
   height: 50%;
 }
-#sidebar a{
+#sidebar a {
   width: 100%;
   padding: 0 30px;
   text-decoration: none;
@@ -78,7 +80,7 @@ html,body {
   display: flex;
   /* Additional styling for the active sidebar */
 }
-#sidebar{
+#sidebar {
   position: fixed;
   top: 0;
   right: 0;
@@ -87,94 +89,97 @@ html,body {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.062);
   backdrop-filter: blur(10px);
-  box-shadow: -10px 0  10 rgb(0, 0, 0, 0.1);
+  box-shadow: -10px 0 10 rgb(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
   align-items: start;
   justify-content: flex-start;
 }
-.menu-batton{
+.menu-batton {
   display: none;
 }
 /* Navber section */
-#nleft, #nright,i{
-    display: flex;
-    align-items: center;
-    gap: 50px;
+#nleft,
+#nright,
+i {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
-#nleft,#nright,a{
+#nleft,
+#nright,
+a {
   color: white;
 }
-#nav a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.2vw;
-    font-weight: 700;
+#nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  font-weight: 700;
 }
 
 /* Hero section */
-#hero{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%,-50%);
+#hero {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
 }
-#hero-left{
-    width: 50%;
+#hero-left {
+  width: 50%;
 }
-#hero-left .elem{
-    position: relative;
-    height: 6vw;
-    overflow: hidden;
+#hero-left .elem {
+  position: relative;
+  height: 6vw;
+  overflow: hidden;
 }
-#hero-left .elem h1:nth-child(1){
-    top: 0;
+#hero-left .elem h1:nth-child(1) {
+  top: 0;
 }
-#hero-left .elem h1{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    line-height: 0.9;
-    font-family: 'Rowdies', sans-serif;
-    color: white;
-    font-size: 5.6vw;
+#hero-left .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  line-height: 0.9;
+  font-family: "Rowdies", sans-serif;
+  color: white;
+  font-size: 5.6vw;
 }
-#hero-right{
-    width: 25%;
-    /* background-color: green */
+#hero-right {
+  width: 25%;
+  /* background-color: green */
 }
-
 
 /* About section */
-#about{
+#about {
   display: flex;
-  margin:0 auto;
+  margin: 0 auto;
   width: 80%;
   height: 100%;
   max-width: 1920px;
 }
-#about-left{
+#about-left {
   height: 100%;
   width: 55%;
   padding: 8vw 8vw;
 }
-#about-left h1{
+#about-left h1 {
   font-size: 4vw;
   line-height: 3.5vw;
 }
-#about-left p{
+#about-left p {
   font-size: 1.2vw;
   font-weight: 500;
   color: #666;
   width: 100%;
-  margin-top:1.3vw;
-  margin-bottom:2.5vw;
+  margin-top: 1.3vw;
+  margin-bottom: 2.5vw;
 }
 /* button */
-#about-left .more-info{
+#about-left .more-info {
   padding: 1vw 2vw;
   font-size: 0.9vw;
   background-color: black;
@@ -184,13 +189,12 @@ html,body {
   color: rgb(255, 255, 255);
 }
 
-
-#about-right{
+#about-right {
   height: 100%;
   width: 45%;
   padding: 8vw 8vw;
 }
-#about-right img{
+#about-right img {
   height: 50%;
   width: 100%;
   border: 12px solid black;
@@ -212,9 +216,9 @@ html,body {
 }
 
 /* education section */
-#education{
+#education {
   display: flex;
-  margin:0 auto;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -222,12 +226,12 @@ html,body {
   background-size: cover;
   background-position: center;
 }
-#edu-left{
+#edu-left {
   height: 80%;
   width: 60%;
   padding: 8vw 8vw;
 }
-#edu-card{
+#edu-card {
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 8px black;
   height: 60%;
@@ -239,53 +243,66 @@ html,body {
 #edu-card:hover {
   transform: translateX(5px) translateY(-5px);
 }
-#edu-card h1{
-  font-size:3vw;
+#edu-card h1 {
+  font-size: 3vw;
 }
-#edu-card table{
+#edu-card table {
   margin-top: 1.8vw;
   border-spacing: 1.7vw;
 }
-#edu-card table th{
+#edu-card table th {
   font-size: 1.8vw;
 }
-#edu-card table td{
+#edu-card table td {
   font-size: 1.3vw;
 }
 
-#edu-right{
+#edu-right {
   height: 80%;
   width: 40%;
   padding: 8vw 8vw;
 }
 
 /* protfilo */
-#protfilo{
+#protfilo {
   width: 100%;
-  height: 20%;
+  height: 30%;
   max-width: 1920px;
-  background-color: rgb(43, 47, 47);
+  background-color: rgb(50, 53, 53);
 }
-#protfilo h1{
+#protfilo h1 {
   font-size: 4vw;
   padding-top: 2vw;
   padding-left: 9vw;
-  color: azure;
+  color: rgb(255, 255, 255);
 }
-#protfilo-mani{
+#protfilo h2 {
+  font-size: 2vw;
+  padding-top: 2vw;
+  padding-left: 9vw;
+  margin-bottom: 1vw;;
+  color: rgb(255, 255, 255);
+  /* text-align: center; */
+}
+#protfilo hr {
+  /* border-top: 3px solid black; */
+  width: 20%;
+  margin-left: 3vw;
+}
+#protfilo-mani {
   display: flex;
   justify-content: center;
   gap: 2.2vw;
   align-items: center;
   position: relative;
   z-index: 10;
-  margin:0 auto;
+  margin: 0 auto;
   width: 100%;
-  height: 80%;
+  height: 70%;
   max-width: 1920px;
-  background-color: aqua;
+  background-color: rgb(50, 53, 53);
 }
-.filo-card{
+.filo-card {
   height: 75%;
   width: 27%;
   border-radius: 25px;
@@ -294,60 +311,80 @@ html,body {
   overflow: hidden;
   transition: all ease 0.6s;
 }
-#prt-card1{
-  background-image: url(img/prot1.png);
+#prt-card1 {
+  background-image: url(img/protfilo/uni-roon-analysis.png);
 }
-#prt-card2{
-  background-image: url(img/prot2.jpeg);
+#prt-card2 {
+  background-image: url(img/protfilo/urro.png);
 }
-#prt-card3{
-  background-image: url(img/prot3.jpeg);
+#prt-card3 {
+  background-image: url(img/protfilo/zantech.png);
 }
-.overlay{
-  height:100%;
-  width:100%;
+.overlay {
+  height: 100%;
+  width: 100%;
   padding: 0.3vw;
   padding-top: 3vw;
-  background-color: blue;
+  backdrop-filter: blur(50px);
   opacity: 0;
   transition: all ease 0.6s;
 }
-.overlay h4{
-  color: white;
+.overlay h4 {
+  color: rgb(0, 0, 0);
   font-size: 2.8vw;
   text-transform: uppercase;
   margin-bottom: 1.5vw;
   text-align: center;
 }
-.overlay p{
-  color: rgb(255, 255, 255);
+.overlay p {
+  color: rgb(0, 0, 0);
   font-size: 1.2vw;
+  margin-bottom: 1.5vw;
 }
-.filo-card:hover .overlay{
+.card-button {
+  font-size: 1.2vw;
+  padding: 0.5vw;
+  text-align:center;
+  margin-left: 2vw;
+  border-radius: 10px;
+}
+.card-button:hover{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+.card-button:focus{
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+.filo-card:hover .overlay {
   opacity: 1;
 }
-.filo-card:hover{
-  transform:rotate3d(-1,1,0,20deg)
-}
+
 /* Mobile */
 @media (max-width: 600px) {
-  #nav{
+  #nav {
     padding: 3vw 1vw;
   }
-  #nav-ab,#nav-ed,#nav-pf, #nav-ct,#nav-re{
+  #nav-ab,
+  #nav-ed,
+  #nav-pf,
+  #nav-ct,
+  #nav-re {
     display: none;
   }
-  .hidenOnMobile{
+  .hidenOnMobile {
     display: none;
   }
-  .menu-batton{
-    display:block;
+  .menu-batton {
+    display: block;
   }
-  #sidebar{
+  #sidebar {
     width: 100%;
   }
 
-  #about{
+  #about {
+    flex-direction: column;
+  }
+  #protfilo-mani{
     flex-direction: column;
   }
 }
