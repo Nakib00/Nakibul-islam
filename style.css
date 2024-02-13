@@ -164,12 +164,25 @@ a {
   line-height: 0.9;
   font-family: "Rowdies", sans-serif;
   color: white;
-  font-size: 5.6vw;
+  font-size: 5.6rem;
 }
 
 #hero-right {
   width: 25%;
   /* background-color: green */
+}
+
+@media only screen and (max-width: 600px) {
+  
+#hero-left .elem h1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  line-height: 0.9;
+  font-family: "Rowdies", sans-serif;
+  color: white;
+  font-size: 1.7rem;
+}
 }
 
 /* About section */
@@ -283,28 +296,29 @@ a {
 /* education section */
 #education {
   display: flex;
+  flex-direction: column;
+  align-items: center; 
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  max-width: 1920px;
+  width: 100%; 
+  max-width: 1200px;
   background-image: url(img/eduBg.jpg);
   background-size: cover;
   background-position: center;
 }
 
-#edu-left {
-  height: 80%;
-  width: 60%;
-  padding: 8vw 8vw;
+#edu-left,
+#edu-right {
+  width: 100%;
+  padding: 5%; 
+  box-sizing: border-box;
+  padding-bottom: 10%;
 }
 
 #edu-card {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8); /* Add transparency for better readability */
   box-shadow: 2px 2px 8px black;
-  height: 60%;
-  width: 100%;
   border-radius: 10px;
-  padding: 3vw 6vw;
+  padding: 20px; /* Adjust padding as needed */
   transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
@@ -313,27 +327,39 @@ a {
 }
 
 #edu-card h1 {
-  font-size: 3vw;
+  font-size: 2rem; /* Adjust font size as needed */
+  margin-top: 10px; /* Add margin-top for space */
 }
 
 #edu-card table {
-  margin-top: 1.8vw;
-  border-spacing: 1.7vw;
+  margin-top: 20px; /* Adjust margin-top as needed */
+  width: 100%; /* Ensure table occupies full width */
+  border-collapse: collapse; /* Ensure table cells have no spacing between them */
+}
+
+#edu-card table th,
+#edu-card table td {
+  padding: 10px; /* Adjust padding as needed */
+  text-align: left; /* Align text to the left */
 }
 
 #edu-card table th {
-  font-size: 1.8vw;
+  font-size: 1.2rem; /* Adjust font size as needed */
 }
 
 #edu-card table td {
-  font-size: 1.3vw;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+#edu-left {
+  order: 2;
+  padding-bottom: 10%; 
 }
 
 #edu-right {
-  height: 80%;
-  width: 40%;
-  padding: 8vw 8vw;
+  order: 1;
 }
+
 
 /* protfilo */
 #protfilo {
